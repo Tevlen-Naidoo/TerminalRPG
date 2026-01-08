@@ -1,7 +1,7 @@
 ﻿using TerminalRPG.Lib.Weapons;
 
-namespace TerminalRPG.Cli
-{
-    Weapon weapon = new Lib.Weapons.Weapon();
 
-}
+Sword sword = new Sword(100);
+
+System.Console.WriteLine(sword.Sharpness);
+
