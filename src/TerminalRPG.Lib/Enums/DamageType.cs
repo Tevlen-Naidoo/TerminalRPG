@@ -1,6 +1,6 @@
 namespace TerminalRPG.Lib.Enums
 {
-    enum DamageType
+    public enum DamageType
     {
         Water,
         Earth,
