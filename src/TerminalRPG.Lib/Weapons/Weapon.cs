@@ -14,6 +14,8 @@ namespace TerminalRPG.Lib.Weapons
             BaseDamage = baseDamage;
             Damage = damage;
         }
+
+        public abstract int getDamage();
     }
 }
 

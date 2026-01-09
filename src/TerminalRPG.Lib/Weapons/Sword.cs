@@ -9,5 +9,9 @@ namespace TerminalRPG.Lib.Weapons
             Sharpness = sharpness;
         }
 
+        public override int getDamage()
+        {
+            return Convert.ToInt16(Math.Ceiling(Sharpness * BaseDamage));
+        }
     }
 }
