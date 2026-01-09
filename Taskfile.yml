@@ -1,0 +1,45 @@
+version: '3'
+
+vars:
+  STARTUP_PROJECT: "./src/TerminalRPG.Cli/"
+  SOLUTION: "./TerminalRPG.slnx"
+
+tasks:
+  default:
+    desc: List available tasks
+    cmds:
+      - task --list
+
+  lint:
+    desc: Checks code formatting without making changes
+    cmds:
+      - echo "Checking the formatting..."
+      - dotnet format {{.SOLUTION}} --verify-no-changes --severity warn
+      - echo "Done!"
+
+  fix:
+    desc: Fixes formatting
+    cmds:
+      - echo "Fixing the formatting..."
+      - dotnet format {{.SOLUTION}}
+      - echo "Done!"
+
+  build:
+    desc: Builds the solution
+    cmds:
+      - echo "Building the solution..."
+      - dotnet build {{.SOLUTION}}
+      - echo "Done!"
+
+  run:
+    desc: Runs the application
+    cmds:
+      - echo "Running the application..."
+      - dotnet run --project {{.STARTUP_PROJECT}}
+
+  dev:
+    desc: Fixes everything and then runs
+    cmds:
+      - task: fix
+      - task: run
+
