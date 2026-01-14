@@ -2,29 +2,29 @@ using TerminalRPG.Lib.Enums;
 
 namespace TerminalRPG.Lib.Weapons
 {
-    public abstract class WeaponBuilder
+    public abstract class WeaponBuilder<T> where T : WeaponBuilder<T>
     {
 
-        public required string Name { get; set; }
-        public required int BaseDamage { get; set; }
-        public required DamageType Damage { get; set; }
+        public string? Name { get; set; }
+        public int BaseDamage { get; set; }
+        public DamageType Damage { get; set; }
 
-        public WeaponBuilder setName(string name)
+        public T setName(string name)
         {
             Name = name;
-            return this;
+            return (T)this;
         }
 
-        public WeaponBuilder setBaseDamage(int baseDamage)
+        public T setBaseDamage(int baseDamage)
         {
             BaseDamage = baseDamage;
-            return this;
+            return (T)this;
         }
 
-        public WeaponBuilder setDamageType(DamageType damage)
+        public T setDamageType(DamageType damage)
         {
             Damage = damage;
-            return this;
+            return (T)this;
         }
 
         public abstract Weapon build();

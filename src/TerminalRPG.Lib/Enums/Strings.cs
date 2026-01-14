@@ -6,6 +6,7 @@ namespace TerminalRPG.Lib.Enums
         public static class Messages
         {
             public const string InvalidHealthException = "Current health cannot be less than 0 or more than maximum health";
+            public const string InvalidWeaponNameException = "Weapon name CANNOT be NULL or EMPTY";
         }
 
         public static class Weapons

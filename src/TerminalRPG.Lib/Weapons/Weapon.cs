@@ -4,9 +4,9 @@ namespace TerminalRPG.Lib.Weapons
 {
     public abstract class Weapon
     {
-        public string Name { get; }
-        public int BaseDamage { get; }
-        public DamageType Damage { get; }
+        public string Name { get; init; }
+        public int BaseDamage { get; init; }
+        public DamageType Damage { get; init; }
 
         protected Weapon(string name, int baseDamage, DamageType damage)
         {
