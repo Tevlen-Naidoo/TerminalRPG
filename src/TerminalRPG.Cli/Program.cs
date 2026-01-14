@@ -2,5 +2,5 @@
 
 Sword sword = new Sword(100);
 
-System.Console.WriteLine(sword.Damage);
+System.Console.WriteLine("Damage Type: " + sword.Damage.ToString());
 

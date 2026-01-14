@@ -13,5 +13,6 @@ namespace TerminalRPG.Lib.Weapons
         {
             return Convert.ToInt16(Math.Ceiling(Power * BaseDamage));
         }
+
     }
 }
