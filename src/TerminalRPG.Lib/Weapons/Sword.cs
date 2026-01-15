@@ -1,6 +1,6 @@
 namespace TerminalRPG.Lib.Weapons
 {
-    public class Sword : Weapon
+    sealed public class Sword : Weapon
     {
         public float Sharpness { get; set; }
 
@@ -9,9 +9,6 @@ namespace TerminalRPG.Lib.Weapons
             Sharpness = sharpness;
         }
 
-        public override int getDamage()
-        {
-            return Convert.ToInt16(Math.Ceiling(Sharpness * BaseDamage));
-        }
+        public override int getDamage() => Convert.ToInt16(Math.Ceiling(Sharpness * BaseDamage));
     }
 }

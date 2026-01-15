@@ -1,6 +1,6 @@
 namespace TerminalRPG.Lib.Weapons
 {
-    public class Bow : Weapon
+    sealed public class Bow : Weapon
     {
         public float Power { get; set; }
 
